@@ -1,17 +1,19 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "dniccum/laravel-request-logs",
+    "description": "Log and debug HTTP requests within your Laravel application.",
     "keywords": [
-        ":vendor_name",
+        "dniccum",
         "laravel",
-        ":package_slug"
+        "request-logs",
+        "logs",
+        "laravel-request-logs"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/dniccum/laravel-request-logs",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Doug Niccum",
+            "email": "dniccumdesign@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Dniccum\\LaravelRequestLogs\\": "src",
+            "Dniccum\\LaravelRequestLogs\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Dniccum\\LaravelRequestLogs\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Dniccum\\LaravelRequestLogs\\LaravelRequestLogsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelRequestLogs": "Dniccum\\LaravelRequestLogs\\Facades\\LaravelRequestLogs"
             }
         }
     },
