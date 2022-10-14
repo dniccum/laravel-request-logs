@@ -2,9 +2,9 @@
 
 namespace Dniccum\LaravelRequestLogs;
 
+use Dniccum\LaravelRequestLogs\Commands\CleanReqeustLogsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Dniccum\LaravelRequestLogs\Commands\CleanReqeustLogsCommand;
 
 class LaravelRequestLogsServiceProvider extends PackageServiceProvider
 {

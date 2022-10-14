@@ -14,13 +14,13 @@ class RequestLog extends Model
         'request_body' => 'json',
         'response_body' => 'json',
         'request_header' => 'json',
-        'request_start' => 'datetime'
+        'request_start' => 'datetime',
     ];
 
     public $timestamps = false;
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function getTable()
     {

@@ -2,9 +2,9 @@
 
 namespace Dniccum\LaravelRequestLogs\Tests;
 
+use Dniccum\LaravelRequestLogs\LaravelRequestLogsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Dniccum\LaravelRequestLogs\LaravelRequestLogsServiceProvider;
 
 class TestCase extends Orchestra
 {

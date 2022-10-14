@@ -35,7 +35,7 @@ class RequestLogFactory extends Factory
     /**
      * @return string
      */
-    protected function sampleJson() : string
+    protected function sampleJson(): string
     {
         return '{
             "_id": "6349d4113e71d47199593800",

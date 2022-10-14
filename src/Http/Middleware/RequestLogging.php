@@ -15,7 +15,7 @@ class RequestLogging
     /**
      * Middleware constructor
      *
-     * @param RequestLog $log
+     * @param  RequestLog  $log
      */
     public function __construct(RequestLog $log)
     {
@@ -68,13 +68,13 @@ class RequestLogging
     /**
      * Adds UUId to request
      *
-     * @param Request $request
+     * @param  Request  $request
      * @return Request
      */
-    protected function identifyRequest(Request  $request) : Request
+    protected function identifyRequest(Request $request): Request
     {
         $requestId = Str::uuid()->toString();
-        $request->headers->add([ 'request_id' => $requestId ]);
+        $request->headers->add(['request_id' => $requestId]);
 
         return $request;
     }
