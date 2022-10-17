@@ -117,11 +117,6 @@ Route::post('/create-project', [ \App\Http\Controllers\SampleController::class, 
     ->middleware([ 'route-logging' ]);
 ```
 
-```php
-$laravelRequestLogs = new Dniccum\LaravelRequestLogs();
-echo $laravelRequestLogs->echoPhrase('Hello, Dniccum!');
-```
-
 ### Log Cleanup (optional)
 
 **Note** – this is not required but *HIGHLY* recommended as this could lead to large amounts of data within your database in short periods of time.
@@ -129,7 +124,8 @@ echo $laravelRequestLogs->echoPhrase('Hello, Dniccum!');
 To automate the removal of older logs you can either use the provided artisan command `php artisan request-logs:clean` manually with your app's environment, or you can leverage your app's scheduler process within your `app/Console/Kernel.php` file to automate it like so:
 
 ```php
-$schedule->job(\Dniccum\LaravelRequestLogs\Commands\CleanReqeustLogsCommand::class)->daily();
+$schedule->job(\Dniccum\LaravelRequestLogs\Commands\CleanReqeustLogsCommand::class)
+    ->daily();
 ```
 
 #### Stored History
