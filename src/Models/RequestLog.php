@@ -2,10 +2,26 @@
 
 namespace Dniccum\LaravelRequestLogs\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
+/**
+ * Dniccum\LaravelRequestLogs\Model\RequestLog
+ *
+ * @property string $id
+ * @property string $method
+ * @property string $url
+ * @property string $ip
+ * @property string $request_body
+ * @property string $response_body
+ * @property string|array|mixed $request_header
+ * @property Carbon|string $request_start
+ * @property Carbon|string $request_end
+ * @property Carbon|string $created_at
+ * @property int $status_code
+ */
 class RequestLog extends Model
 {
     use HasFactory;
