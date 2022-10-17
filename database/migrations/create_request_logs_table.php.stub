@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create(config('request-logs.table_name'), function (Blueprint $table) {
+        Schema::create(config('request-logs.table_name', 'request_logs'), function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('method');
             $table->timestamp('request_start');
@@ -38,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('request-logs.table_name'));
+        Schema::dropIfExists(config('request-logs.table_name', 'request_logs'));
     }
 };
