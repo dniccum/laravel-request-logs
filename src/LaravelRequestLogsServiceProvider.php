@@ -13,7 +13,7 @@ class LaravelRequestLogsServiceProvider extends PackageServiceProvider
     public function bootingPackage()
     {
         if (app()->runningUnitTests()) {
-            if (!defined('LARAVEL_START')) {
+            if (! defined('LARAVEL_START')) {
                 define('LARAVEL_START', microtime(true));
             }
 

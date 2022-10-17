@@ -2,8 +2,6 @@
 
 namespace Dniccum\LaravelRequestLogs\Http\Controllers;
 
-use Dniccum\LaravelRequestLogs\Http\Middleware\RequestLogging;
-
 class TestController extends \Illuminate\Routing\Controller
 {
     /**
@@ -22,7 +20,7 @@ class TestController extends \Illuminate\Routing\Controller
     public function getRequest()
     {
         return response()->json([
-            'message' => 'GET request successful'
+            'message' => 'GET request successful',
         ]);
     }
 
@@ -34,7 +32,7 @@ class TestController extends \Illuminate\Routing\Controller
     public function postRequest()
     {
         return response()->json([
-            'message' => 'POST request successful'
+            'message' => 'POST request successful',
         ], 201);
     }
 
@@ -46,7 +44,7 @@ class TestController extends \Illuminate\Routing\Controller
     public function putRequest()
     {
         return response()->json([
-            'message' => 'PUT request successful'
+            'message' => 'PUT request successful',
         ]);
     }
 
@@ -58,7 +56,7 @@ class TestController extends \Illuminate\Routing\Controller
     public function deleteRequest()
     {
         return response()->json([
-            'message' => 'DELETE request successful'
+            'message' => 'DELETE request successful',
         ]);
     }
 }
