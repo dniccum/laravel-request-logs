@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Routing\Router;
 
 uses(RefreshDatabase::class);
 
@@ -15,7 +14,7 @@ it('can log a GET request', function () {
         'request_body' => json_encode([]),
         'status_code' => 200,
         'response_body' => json_encode([
-            'message' => 'GET request successful'
+            'message' => 'GET request successful',
         ]),
     ]);
 });
@@ -30,7 +29,7 @@ it('can log a POST request', function () {
         'request_body' => json_encode([]),
         'status_code' => 201,
         'response_body' => json_encode([
-            'message' => 'POST request successful'
+            'message' => 'POST request successful',
         ]),
     ]);
 });
@@ -45,7 +44,7 @@ it('can log a PUT request', function () {
         'request_body' => json_encode([]),
         'status_code' => 200,
         'response_body' => json_encode([
-            'message' => 'PUT request successful'
+            'message' => 'PUT request successful',
         ]),
     ]);
 });
@@ -60,7 +59,7 @@ it('can log a DELETE request', function () {
         'request_body' => json_encode([]),
         'status_code' => 200,
         'response_body' => json_encode([
-            'message' => 'DELETE request successful'
+            'message' => 'DELETE request successful',
         ]),
     ]);
 });
