@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-request-logs` will be documented in this file.
 
+## v1.0.1 - 2022-10-17
+
+Updates PHP version dependencies and adds the Laravel framework as a dependency.
+
 ## Initial Release - 2022-10-17
 
 ### What's Changed
