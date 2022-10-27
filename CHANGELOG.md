@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-request-logs` will be documented in this file.
 
+## v1.0.2 - 2022-10-27
+
+### What's Changed
+
+- Bugfix/response body overload protection by @dniccum in https://github.com/dniccum/laravel-request-logs/pull/3
+
+**Full Changelog**: https://github.com/dniccum/laravel-request-logs/compare/1.0.1...1.0.2
+
 ## v1.0.1 - 2022-10-17
 
 Updates PHP version dependencies and adds the Laravel framework as a dependency.
