@@ -63,6 +63,8 @@ class RequestLogging
         $logEntry->status_code = $response->getStatusCode();
         if ($response->getContent() && strlen($response->getContent()) <= 65000) {
             $logEntry->response_body = json_decode($response->getContent(), true);
+        } else {
+            $logEntry->response_body = "Response was too long to store.";
         }
         $logEntry->save();
     }
