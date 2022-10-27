@@ -117,6 +117,10 @@ Route::post('/create-project', [ \App\Http\Controllers\SampleController::class, 
     ->middleware([ 'route-logging' ]);
 ```
 
+#### IMPORTANT: Response Body Length Limit
+
+Assuming that your database migration and model are unchanged, there is currently logic in place that will prevent the `response_body` column from being overloaded. What does this mean? In the event that the response body of the request that you are logging is very large (ie returning 500+ results from an API), the number of bytes/characters might be too large for the database to store without failing. If the response body **is longer than 65,000 characters, the response body will NOT be saved.**
+
 ### Log Cleanup (optional)
 
 **Note** – this is not required but *HIGHLY* recommended as this could lead to large amounts of data within your database in short periods of time.
