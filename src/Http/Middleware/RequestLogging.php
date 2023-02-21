@@ -14,8 +14,6 @@ class RequestLogging
 
     /**
      * Middleware constructor
-     *
-     * @param  RequestLog  $log
      */
     public function __construct(RequestLog $log)
     {
@@ -25,7 +23,6 @@ class RequestLogging
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
@@ -45,8 +42,6 @@ class RequestLogging
     /**
      * Parse the request
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  JsonResponse  $response
      * @return void
      */
     public function terminate(Request $request, JsonResponse $response)
@@ -71,9 +66,6 @@ class RequestLogging
 
     /**
      * Adds UUId to request
-     *
-     * @param  Request  $request
-     * @return Request
      */
     protected function identifyRequest(Request $request): Request
     {
