@@ -32,9 +32,6 @@ class RequestLogFactory extends Factory
         ];
     }
 
-    /**
-     * @return string
-     */
     protected function sampleJson(): string
     {
         return '{
