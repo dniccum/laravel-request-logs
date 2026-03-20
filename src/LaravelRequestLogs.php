@@ -2,6 +2,4 @@
 
 namespace Dniccum\LaravelRequestLogs;
 
-class LaravelRequestLogs
-{
-}
+class LaravelRequestLogs {}

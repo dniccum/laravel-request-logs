@@ -2,6 +2,7 @@
 
 namespace Dniccum\LaravelRequestLogs\Commands;
 
+use Dniccum\LaravelRequestLogs\Models\RequestLog;
 use Illuminate\Console\Command;
 
 class CleanReqeustLogsCommand extends Command
@@ -13,7 +14,7 @@ class CleanReqeustLogsCommand extends Command
     public function handle(): int
     {
         $date = now()->subDays(config('request-logs.history'));
-        \Dniccum\LaravelRequestLogs\Models\RequestLog::where('request_start', '<=', $date)
+        RequestLog::where('request_start', '<=', $date)
             ->delete();
 
         $this->comment('Request logs are nice and tidy.');

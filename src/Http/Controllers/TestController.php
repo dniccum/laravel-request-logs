@@ -2,7 +2,10 @@
 
 namespace Dniccum\LaravelRequestLogs\Http\Controllers;
 
-class TestController extends \Illuminate\Routing\Controller
+use Illuminate\Http\JsonResponse;
+use Illuminate\Routing\Controller;
+
+class TestController extends Controller
 {
     /**
      * Test Controller Constructor
@@ -15,7 +18,7 @@ class TestController extends \Illuminate\Routing\Controller
     /**
      * Returns a successful GET request
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function getRequest()
     {
@@ -27,7 +30,7 @@ class TestController extends \Illuminate\Routing\Controller
     /**
      * Returns a successful POST request
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function postRequest()
     {
@@ -39,7 +42,7 @@ class TestController extends \Illuminate\Routing\Controller
     /**
      * Returns a successful PUT request
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function putRequest()
     {
@@ -51,7 +54,7 @@ class TestController extends \Illuminate\Routing\Controller
     /**
      * Returns a successful DELETE request
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function deleteRequest()
     {
